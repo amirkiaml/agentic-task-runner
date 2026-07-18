@@ -151,7 +151,7 @@ or scale demands of a production system.
 - **Independent validation of agent decisions**, rather than relying on the
   model to self-report correctly — schema validation, tool-authorization
   rules, or a secondary review step before a tool call executes.
-- **Guardrails**: an earlier version of this project (in `experimentation_notebook.ipynb`)
+- **Guardrails**: an earlier version of this project
   used an SDK `output_guardrail` to catch the model self-reporting an unsupported,
   non-tool answer. It didn't carry over into the final native `@function_tool`
   design, since `DirectAnswerTool` addresses the same failure mode more directly.
