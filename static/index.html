@@ -68,6 +68,7 @@
 
   <div class="panel" id="result-panel" style="display:none;">
     <h2>Result</h2>
+    <div id="result-timestamp" style="font-size:12px;color:var(--muted);margin-bottom:10px;"></div>
     <div id="result-final" class="result-final"></div>
     <div id="result-tools" class="tools-row"></div>
     <ul id="result-trace" class="trace-list"></ul>
@@ -88,6 +89,7 @@
   const resultPanel = document.getElementById('result-panel');
   const resultFinal = document.getElementById('result-final');
   const resultTools = document.getElementById('result-tools');
+  const resultTimestamp = document.getElementById('result-timestamp');
   const resultTrace = document.getElementById('result-trace');
   const historyList = document.getElementById('history-list');
 
@@ -95,6 +97,7 @@
     resultPanel.style.display = 'block';
     resultFinal.textContent = data.error ? `Error: ${data.error}` : data.response;
     resultFinal.className = data.error ? 'error' : 'result-final';
+    resultTimestamp.textContent = data.timestamp ? new Date(data.timestamp).toLocaleString() : '';
 
     resultTools.innerHTML = (data.tools_used || [])
       .map(t => `<span class="tool-badge">${t}</span>`).join('');
@@ -152,6 +155,7 @@
               response: task.final_output,
               tools_used: task.tools_used,
               trace: task.trace,
+              timestamp: task.timestamp,
             });
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }
