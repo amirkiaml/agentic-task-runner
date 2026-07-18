@@ -1,0 +1,30 @@
+# Environment variables — never commit real API keys
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local data — don't commit your actual task history
+tasks.json
+tasks.db
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local data — don't commit generated task history
+tasks*.json
+.bmo/
