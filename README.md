@@ -179,6 +179,7 @@ or scale demands of a production system.
   over the current JSON-file setup for the same reasons — hosted, easy to
   query, minimal ops overhead, and no risk of the write-race condition
   already flagged above.
+- **UI Imporvements** can be done -- both in terms of the aestetics, and in terms of the way the reponses/traces are printed out -- to accommodate streaming and spacing the responses to complex prompts which lead to calling multiple agents, and show tool-calling interdependencies.
 
 ## Time spent
 
