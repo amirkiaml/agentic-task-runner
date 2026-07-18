@@ -79,6 +79,8 @@ static/      — Single-page frontend: submit a task, view result + trace,
 and persistence are each isolated in their own module, so any one piece can
 be tested or replaced independently.
 
+More detailed and visual tracing is available on https://platform.openai.com/trace.
+
 ## AI assistance
 
 I used Claude throughout this build — most heavily for the FastAPI backend
