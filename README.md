@@ -24,7 +24,22 @@ and persistent task history.
 
 ## How to run
 
-Backend and frontend are served from the same FastAPI process — one command runs both.
+Create and activate a conda environment:
+
+```bash
+conda create -n agent-runner python=3.12
+conda activate agent-runner
+```
+
+Copy the environment template and add your OpenAI API key:
+
+```bash
+Copy-Item .env.example .env
+```
+
+Then edit `.env` and replace `your-key-here` with your real key.
+
+Install dependencies and run:
 
 ```bash
 pip install -r requirements.txt
@@ -33,8 +48,7 @@ python app.py
 
 Then open `http://localhost:8000` in a browser.
 
-**Environment**: requires an `.env` file with `OPENAI_API_KEY=...` in the project root.
-Tested on Python 3.11.
+**Environment**: tested on Python 3.12.
 
 ## Dependencies
 
